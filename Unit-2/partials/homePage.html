@@ -4,7 +4,7 @@
 <button ng-click='searchButtonClicked(omdb.searchInput)' id='searchButton'> Search</button>
 
 <ul>
-  <li ng-repeat='movie in omdb.movieData'>
-    <a href="#">{{movie.Title}}</a>
+  <li ng-repeat='movie in omdb.movieData' ng-click=''>
+    <a href="#/{{movie.imdbID}}">{{ movie.Title }}</a>
   </li>
 </ul>
