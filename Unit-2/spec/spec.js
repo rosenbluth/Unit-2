@@ -60,10 +60,18 @@ describe('Unit-2', function() {
 
     it('should have movie details and image on the show page', function(){
         browser.get('http://localhost:8000/#/tt0109190');
+        var moviePlot = element(by.css('#plot'));
+        var releaseDate = element(by.css('#date'));
+        var image = element(by.tagName('img'));
+
+        expect(moviePlot.getText() ).toContain('1994');
+        expect(moviePlot.getText()  ).toContain('Baby Bink');
+        expect(image.getAttribute('src')).toEqual('https://images-na.ssl-images-amazon.com/images/M/MV5BMzI3NmQ1ZDUtZWQ1My00NzlkLWE5OGQtZjZkYWJmYzYwY2QxXkEyXkFqcGdeQXVyNDQ2MTMzODA@._V1_SX300.jpg');
 
 
 
-        
+
+
         // expect( element(by.tagName('h1')) .getText()  ).toContain('BOOYAH');
 
     });

@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
       controller: 'movieApp'
   })
   .when('/:movieID', {
-      templateUrl: 'partials/myShowMovies.html',
+      templateUrl: 'partials/singleMovie.html',
       controller: 'singleMovie'
   });
 });
@@ -25,9 +25,6 @@ app.controller('movieApp', ['$scope', '$http', function ($scope, $http){
         });
     };
 
-    $scope.singleMovieClicked = function(IDfromMovieClickedOn){
-        console.log(IDfromMovieClickedOn);
-    };
 }]);
 
 
@@ -39,6 +36,8 @@ app.controller('singleMovie', ['$scope', '$http', '$routeParams', function ($sco
     $scope.omdb.movieID = $routeParams.movieID;
 
     $http.get('http://www.omdbapi.com/?i=' + $routeParams.movieID).then(function (singleMovieData) {
+        $scope.omdb.movieData = singleMovieData.data;
+
         console.log(singleMovieData.data);
     });
 

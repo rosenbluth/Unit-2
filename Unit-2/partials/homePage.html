@@ -1,10 +1,21 @@
-<h1>BOOYAH</h1>
+<h1>BOOYAH OMDB MOVIE APP</h1>
 
-<input type="text" id='searchInput' ng-model='omdb.searchInput'>
-<button ng-click='searchButtonClicked(omdb.searchInput)' id='searchButton'> Search</button>
+<div class="ui six item menu">
 
-<ul>
-  <li ng-repeat='movie in omdb.movieData' ng-click=''>
-    <a href="#/{{movie.imdbID}}">{{ movie.Title }}</a>
+
+  <input type="text" id='searchInput' ng-model='omdb.searchInput' class ='item'>
+  <button ng-click='searchButtonClicked(omdb.searchInput)' id='searchButton' class='item'> Search</button>
+</div>
+
+
+
+<div class="ui container">
+  <ul>
+  <li ng-repeat='movie in omdb.movieData' class="ui segment">
+
+    <a href="#/{{movie.imdbID}}">{{ movie.Title }} </a>
+    <p>{{movie.Year}}</p>
+
   </li>
 </ul>
+</div>

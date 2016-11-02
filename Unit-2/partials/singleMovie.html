@@ -1,0 +1,39 @@
+<div class="ui six item menu" >
+
+
+  <input type="text" id='searchInput' ng-model='omdb.searchInput' class ='item'>
+  <button ng-click='searchButtonClicked(omdb.searchInput)' id='searchButton' class='item'> Search</button>
+</div>
+
+<div class="ui container">
+
+
+<div class="ui items">
+  <div class="item">
+    <div class="ui small image">
+      <img src="{{omdb.movieData.Poster}}">
+    </div>
+    <div class="content">
+      <div class="header">{{omdb.movieData.Title}}</div>
+      <div class="meta">
+        <p class="year"><strong>Year:</strong>{{omdb.movieData.Year}}</p>
+        <p class="plot"><strong>Plot:</strong>{{omdb.movieData.Plot}}</p>
+        <p class="Actors"><strong>Actors:</strong>{{omdb.movieData.Actors}}</p>
+        <p class="Awards"><strong>Awards:</strong>{{omdb.movieData.Awards}}</p>
+        <p class="Country"><strong>Country:</strong>{{omdb.movieData.Country}}</p>
+        <p class="Genre"><strong>Genre:</strong>{{omdb.movieData.Genre}}</p>
+        <p class="Language"><strong>Language:</strong>{{omdb.movieData.Language}}</p>
+        <p class="Rated"><strong>Rated:</strong>{{omdb.movieData.Rated}}</p>
+        <p class="Runtime"><strong>Runtime:</strong>{{omdb.movieData.Runtime}}</p>
+        <p class="Writer"><strong>Writer:</strong>{{omdb.movieData.Writer}}</p>
+        <p class="Year"><strong>Year:</strong>{{omdb.movieData.Year}}</p>
+
+      </div>
+      <div class="description">
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
